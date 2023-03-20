@@ -10,5 +10,19 @@ function greet(name, time = "day") {              // function
 //     console.log(`Hello ${name}!`);
 // }
 
-greet("Chris", "Night");
+// greet("Chris", "Night");
 
+
+
+
+let user_input = prompt("Enter a radius of the circle: ");
+
+function circleArea(input) 
+{
+    let radius = Math.PI * input**2; 
+    return radius;
+}
+
+let raidus_result = circleArea(user_input).toFixed(2)
+
+alert(`The area of a circle with radius ${user_input} is ${raidus_result}`);
