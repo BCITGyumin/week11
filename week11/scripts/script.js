@@ -52,3 +52,17 @@ function populatelist(shoppingListArray)
 
 let myShoppingList = ["cheese", "bread", "green pepper"];
 populatelist(myShoppingList);
+
+
+
+function squareListMaker()
+{
+    ullist.classList.add("squareList");
+    ullist.classList.remove("circleList");
+}
+
+squareListMaker()
+
+
+// HTMLElement.style
+// Element.setAttribute()
