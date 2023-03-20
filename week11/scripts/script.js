@@ -13,27 +13,42 @@ function greet(name, time = "day") {              // function
 // greet("Chris", "Night");
 
 
-const radiusPara = document.querySelector("#radius");
-console.log(radiusPara)
-const resultPara = document.querySelector("#result");
-console.log(resultPara)
+// const radiusPara = document.querySelector("#radius");
+// console.log(radiusPara)
+// const resultPara = document.querySelector("#result");
+// console.log(resultPara)
 
-let user_input = prompt("Enter a radius of the circle: ");
-radiusPara.textContent += user_input;
+// let user_input = prompt("Enter a radius of the circle: ");
+// radiusPara.textContent += user_input;
 
-function circleArea(input) 
-{
-    if(isNaN(input)) {
-        resultPara.textContent = "Error";
-    }
+// function circleArea(input) 
+// {
+//     if(isNaN(input)) {
+//         resultPara.textContent = "Error";
+//     }
     
-    else {
-        let radius = Math.PI * input**2; 
-        return radius;
+//     else {
+//         let radius = Math.PI * input**2; 
+//         return radius;
+//     }
+// }
+
+// if (circleArea(user_input) !== undefined) {
+//     let raidus_result = circleArea(user_input).toFixed(2);
+//     resultPara.textContent = `The area of a circle with radius ${user_input} is ${raidus_result}`;
+// }
+
+const ullist = document.querySelector(".shopping");
+
+function populatelist(shoppingListArray) 
+{
+    for (let item of shoppingListArray)
+    {
+        let product = document.createElement("li");
+        product.textContent = item;
+        ullist.appendChild(product);
     }
 }
 
-if (circleArea(user_input) !== undefined) {
-    let raidus_result = circleArea(user_input).toFixed(2);
-    resultPara.textContent = `The area of a circle with radius ${user_input} is ${raidus_result}`;
-}
+let myShoppingList = ["cheese", "bread", "green pepper"];
+populatelist(myShoppingList);
