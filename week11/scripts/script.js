@@ -1,7 +1,9 @@
-function greet(name) {
+function greet(name) {              // function
     console.log(`Hello ${name}!`);
 }
 
-greet("Chris")
-greet("Neda")
-greet("Brian")
+let greet = function(name) {        // function expression
+    console.log(`Hello ${name}!`);
+}
+
+greet("Chris");
