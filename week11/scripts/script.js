@@ -13,14 +13,18 @@ function greet(name, time = "day") {              // function
 // greet("Chris", "Night");
 
 
-
+const radiusPara = document.querySelector("#radius");
+console.log(radiusPara)
+const resultPara = document.querySelector("#result");
+console.log(resultPara)
 
 let user_input = prompt("Enter a radius of the circle: ");
+radiusPara.textContent += user_input;
 
 function circleArea(input) 
 {
     if(isNaN(input)) {
-        alert("This is not a number");
+        resultPara.textContent = "Error";
     }
     
     else {
@@ -29,7 +33,7 @@ function circleArea(input)
     }
 }
 
-if (user_input !== undefined) {
+if (circleArea(user_input) !== undefined) {
     let raidus_result = circleArea(user_input).toFixed(2);
-    alert(`The area of a circle with radius ${user_input} is ${raidus_result}`);
+    resultPara.textContent = `The area of a circle with radius ${user_input} is ${raidus_result}`;
 }
